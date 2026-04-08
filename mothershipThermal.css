@@ -1,0 +1,335 @@
+
+        /* FONTS */
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        /* CONFIGURATION */
+        :root {
+            --font-sm:   28px; 
+            --font-base: 32px; 
+            --font-lg:   36px; 
+            --font-xl:   42px; 
+            
+            --border-thick: 3px solid #000;
+            --border-thin:  2px solid #000;
+            --border-dash:  2px dashed #000;
+        }
+
+        /* RESET & BASE */
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 0 15px;
+            font-family: 'VT323', monospace;
+            font-size: var(--font-base);
+            line-height: 1.1;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: var(--font-xl);
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 0 10px 0;
+            padding-top: 10px;
+            border-bottom: var(--border-thick);
+        }
+
+        h2 {
+            font-size: var(--font-lg);
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: var(--border-thin);
+            margin: 25px 0 10px 0;
+        }
+
+        .text-center { text-align: center; }
+        .text-right  { text-align: right; }
+        .bold        { font-weight: bold; }
+        .small-text  { font-size: var(--font-sm); }
+        
+        /* --- UTILITY LINES --- */
+        .divider-dashed {
+            border-bottom: var(--border-dash);
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        /* --- MODULE: TABLES --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: var(--border-thick);
+            margin: 10px 0 0 0; 
+            font-size: var(--font-base);
+        }
+        th {
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+            text-align: left;
+            padding: 6px 10px; /* Increased padding */
+            text-transform: uppercase;
+            border-bottom: var(--border-thick);
+        }
+        td {
+            padding: 6px 10px; /* Increased padding */
+            font-weight: normal; 
+            border-bottom: var(--border-dash);
+        }
+        tr:last-child td { border-bottom: none; }
+
+        /* --- MODULE: METADATA --- */
+        .meta-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: normal; 
+        }
+
+        /* --- MODULE: WARNING BOX --- */
+        .warning-box {
+            border: var(--border-thick);
+            padding: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: var(--font-lg);
+            margin: 15px 0;
+            text-transform: uppercase;
+        }
+
+        /* --- MODULE: SIGNATURE (CENTERED) --- */
+        .signature-wrapper {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center; /* Vertically centers the group */
+            gap: 20px;
+            page-break-inside: avoid;
+        }
+        .sig-lines {
+            flex-grow: 1;
+            /* Ensures the text sits above the center line of the box */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .signature-label {
+            font-size: var(--font-sm);
+            font-weight: bold;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+        .signature-line {
+            border-bottom: var(--border-thin);
+            width: 100%;
+            height: 2px; 
+        }
+        .stamp-box {
+            width: 120px;
+            height: 120px;
+            border: var(--border-dash);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-sm);
+            color: #000;
+            flex-shrink: 0;
+        }
+
+        /* --- MODULE: INVOICE TOTALS --- */
+        .invoice-total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: var(--font-lg);
+            border: var(--border-thick);
+            border-top: none; 
+            padding: 5px 10px; /* Increased Padding */
+            margin-top: 0; 
+        }
+
+        /* --- MODULE: SYSTEM DIAGNOSTICS --- */
+        .checklist-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .check-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dotted #000;
+        }
+
+        /* --- MODULE: STATUS BAR --- */
+        .status-bar-container {
+            margin: 20px 0;
+        }
+        .status-label {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        .progress-track {
+            border: var(--border-thick);
+            height: 24px;
+            width: 100%;
+            background: #fff;
+            padding: 2px;
+        }
+        .progress-fill {
+            background: #000000;
+            height: 100%;
+            width: 75%; 
+        }
+
+        /* --- MODULE: LEGAL --- */
+        .legal-block {
+            font-size: var(--font-sm);
+            text-align: justify;
+            margin: 10px 0;
+        }
+        .legal-list { padding-left: 20px; margin: 5px 0; }
+        .legal-list li { margin-bottom: 5px; }
+
+        
+        .quote-block {
+            text-align: center;
+            font-style: italic;
+            border-top: 2px dashed #000;
+            border-bottom: 2px dashed #000;
+            padding: 8px 0;
+            margin: 10px 0;
+            font-size: 26px;
+        }
+
+        /* --- MODULE: STAT BLOCK --- */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            text-align: center;
+            border: var(--border-thin);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .stat-item span { display: block; }
+        .stat-val { font-size: var(--font-lg); font-weight: bold; }
+        .stat-lbl { font-size: var(--font-sm); }
+
+        /* --- MODULE: ASCII MAP --- */
+        .ascii-art {
+            font-family: 'VT323', monospace;
+            white-space: pre;
+            line-height: 1;
+            font-size: var(--font-sm);
+            text-align: center;
+            border: var(--border-dash);
+            padding: 10px 0;
+            margin: 15px 0;
+            overflow-x: hidden;
+        }
+
+        /* --- MODULE: COMMS --- */
+        .comm-line { margin-bottom: 8px; display: flex; gap: 10px; }
+        .comm-time { font-weight: bold; min-width: 60px; }
+        .comm-user { font-weight: bold; text-transform: uppercase; }
+
+        /* --- MODULE: RESOURCE --- */
+        .resource-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dotted #000;
+            padding: 5px 0;
+        }
+        .checkboxes { letter-spacing: 5px; font-weight: bold; }
+
+        /* --- MODULE: ID CARD (LARGE PHOTO) --- */
+        .id-card {
+            border: var(--border-thick);
+            padding: 10px;
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            align-items: flex-start;
+        }
+        .photo-placeholder {
+            width: 120px;  /* Larger */
+            height: 140px; /* Larger */
+            background: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: var(--font-sm);
+            flex-shrink: 0;
+        }
+        .id-details { flex-grow: 1; }
+
+        /* --- MODULE: REDACTED --- */
+        .redacted { background-color: #000; color: #000; padding: 0 4px; }
+        
+        /* --- MODULE: BOUNTY --- */
+        .bounty-header {
+            text-align: center;
+            border: var(--border-thick);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .wanted-text { font-size: var(--font-xl); font-weight: bold; }
+        .reward-text { font-size: var(--font-lg); border-top: var(--border-thin); margin-top: 5px; padding-top: 5px;}
+
+        /* --- MODULE: BODY SCAN --- */
+        .scan-list { display: grid; grid-template-columns: 1fr 1fr; font-size: var(--font-sm); }
+
+        /* --- NEW MODULE: WEAPON SPEC --- */
+        .weapon-card {
+            border: var(--border-thick);
+            margin-bottom: 15px;
+        }
+        .weapon-header {
+            background: #000;
+            color: #fff;
+            padding: 5px;
+            font-weight: bold;
+            font-size: var(--font-lg);
+            text-align: center;
+        }
+        .weapon-details {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            font-size: var(--font-sm);
+        }
+
+        /* --- NEW MODULE: KEYPAD --- */
+        .keypad-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            width: 200px;
+            margin: 0 auto;
+        }
+        .keypad-btn {
+            border: 2px solid #000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: var(--font-lg);
+        }
+
+        /*
+        // PRINT SETTINGS
+        @media print {
+            body { margin: 0; padding: 0 15px; }
+            @page { margin: 0; size: auto; }
+        }
+        */
