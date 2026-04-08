@@ -1,0 +1,10 @@
+{
+	"name": "MothershipOxygenBill",
+	"slug": "mothership-oxygen-bill",
+	"author": "tatourmi",
+	"description": "The daily oxygen bill. Should be hooked up to a random generator of some kind for nice messages. Add special deals using the div class='coupon-ticket' in the message.",
+	"copyrightNotice": "",
+	"dataSources": [],
+	"config": [],
+	"images": {}
+}

@@ -1,0 +1,40 @@
+
+<head>
+    <link rel="stylesheet" href="https://raw.githack.com/Lavaill/PublicStylesheets/main/mothership.css">
+</head>
+<h1>CREW LEDGER</h1>
+
+<div class="meta-grid">
+    <span>VESSEL: {{it.shipName}}</span>
+    <span>VESSEL-ID: {{it.shipId}}</span>
+</div>
+<div class="divider-dashed"></div>
+
+{% for member in it.crew %}
+<div class="id-card">
+    <div class="photo-placeholder">
+        [IMG]<br>OFFLINE
+    </div>
+    <div class="id-details">
+        <div class="bold" style="font-size: var(--font-lg); border-bottom: var(--border-thin);">
+            {{member.name | safe}}
+        </div>
+        
+        <div class="meta-grid small-text" style="margin-top: 5px;">
+            <span>{{member.role | safe}}</span>
+            <span>ID:{{member.serialNumber | safe}}</span>
+        </div>
+        
+        <div class="legal-block">
+            {{member.description | safe}}
+        </div>
+
+            {% for alert in member.alerts %}
+                <div class="warning-box">{{alert | safe}}</div>
+            {% endfor %}
+    </div>
+</div>
+{% endfor %}
+
+<div class="divider-dashed"></div>
+<div class="text-center small-text">END OF RECORD</div>

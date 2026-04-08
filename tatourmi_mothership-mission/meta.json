@@ -1,0 +1,10 @@
+{
+	"name": "MothershipMission",
+	"slug": "mothership-mission",
+	"author": "tatourmi",
+	"description": "This template contains a printout containing G.M notes for an associated Contract. Try to match them by ID if you can, makes retrieval with other programs easier.",
+	"copyrightNotice": "",
+	"dataSources": [],
+	"config": [],
+	"images": {}
+}

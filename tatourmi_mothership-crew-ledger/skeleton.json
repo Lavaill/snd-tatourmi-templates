@@ -1,0 +1,39 @@
+{
+	"crew": [
+		{
+			"alerts": [],
+			"description": "Trained Helios Exobiologist. Brother to \u003cspan class=\"redacted\"\u003eBooba\u003c/span\u003e, closeness of relationship unclear.",
+			"name": "BUCKY, B.",
+			"role": "SCIENTIST",
+			"serialNumber": "7443-HS"
+		},
+		{
+			"alerts": [
+				"PSYCH-EVAL PENDING"
+			],
+			"description": "Ex-Helios, legally changed name to ID after traumatic incident. Interest in art and Solarian religion.",
+			"name": "3086",
+			"role": "MARINE",
+			"serialNumber": "3086-HM"
+		},
+		{
+			"alerts": [
+				"POTENTIAL \u003cspan class=\"redacted\"\u003eCARC-01\u003c/span\u003e INFECTION",
+				"UNSTABLE MEMORY CORE"
+			],
+			"description": "Helios public outreach android, shows heavy traces of memory core manipulation. Has shown sympathy towards android rights activists in the past, keep an eye on them.",
+			"name": "R4V3N",
+			"role": "SYNTHETIC",
+			"serialNumber": "9821-HA"
+		},
+		{
+			"alerts": [],
+			"description": "Atmos extraction vehicle pilot, licensed for crafts up to Class II, close to 3086. Not familiar with Hyperspace protocols yet, seeks training.",
+			"name": "RIVERS, C.",
+			"role": "SYNTHETIC",
+			"serialNumber": "8934-HP"
+		}
+	],
+	"shipId": "PCS-8912",
+	"shipName": "FTL Pelican"
+}

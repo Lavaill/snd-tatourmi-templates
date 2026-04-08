@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://raw.githack.com/Lavaill/PublicStylesheets/main/mothership.css">
+    <style>
+        .job-header {
+            font-size: 42px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #000;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        /* DESCRIPTION BOX */
+        .desc-box {
+            border: 2px dashed #000;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: var(--font-sm);
+        }
+
+        /* THREAT & PAY GRID */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .calc-box {
+            border: 2px solid #000;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .defcon-scale {
+            display: flex;
+            border: 2px solid #000;
+            margin-top: 5px;
+        }
+
+        .defcon-lvl {
+            flex-grow: 1;
+            text-align: center;
+            font-weight: bold;
+            background: #fff;
+            font-size: var(--font-sm);
+        }
+
+        .defcon-active {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="job-header">{{it.missionName | safe}}</div>
+    <div class="meta-grid">
+        <span>CLI: {{it.client | safe}}</span>
+        <span>ID: {{it.missionId | safe}}</span>
+    </div>
+
+    <div class="desc-box">
+        {{it.missionDescription | safe}}
+    </div>
+
+    <div class="checklist-container">
+        {% for param in it.params %}
+        <div class="check-item"><span>{{param.name | safe}}:</span><span
+                style="font-size: var(--font-sm); text-align: center">{{param.info | safe}}</span><span>{{param.checkbox
+                | safe}}</span></div>
+        {% endfor %}
+    </div>
+    {% for warn in it.warnings %}
+    <div class="warning-box">
+        /!\ {{warn.text | safe}} /!\
+    </div>
+    {% endfor %}
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 60%">Objective</th>
+                <th style="width: 25%">Pay</th>
+                <th style="width: 15%">OK</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for obj in it.objectives %}
+            <tr>
+                <td>{{obj.objective | safe}}</td>
+                <td>{{obj.pay | safe}}</td>
+                <td>[ ]</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+    <div class="calc-grid">
+        <div>
+            <div class="small-text bold text-center">HAZARD LEVEL</div>
+            <div class="defcon-scale">
+                <div class="defcon-lvl {{ 'defcon-active' if it.hazard == 1 }}">1</div>
+                <div class="defcon-lvl {{ 'defcon-active' if it.hazard == 3 }}">3</div>
+                <div class="defcon-lvl {{ 'defcon-active' if it.hazard == 5 }}">5</div>
+                <div class="defcon-lvl {{ 'defcon-active' if it.hazard == 8 }}">8</div>
+                <div class="defcon-lvl {{ 'defcon-active' if it.hazard == 13 }}">13</div>
+            </div>
+        </div>
+        <div class="calc-box">
+            <div class="small-text bold">On Completion</div>
+            <div style="font-size: var(--font-xl); font-weight: bold;">{{it.missionPay.text | safe}}<span
+                    style="font-size:var(--font-sm)">{{it.missionPay.unit | safe}}</span></div>
+        </div>
+    </div>
+
+    <div class="signature-wrapper">
+        <div class="sig-lines">
+            <div class="signature-label">Contractor signature</div>
+            <div class="signature-line"></div>
+        </div>
+        <div class="stamp-box">Complete</div>
+    </div>
+
+</body>
+
+</html>
