@@ -1,18 +1,23 @@
-<head>    
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <link rel="stylesheet" href="https://raw.githack.com/Lavaill/PublicStylesheets/main/mothership.css">
 </head>
 <body>
-<div class="warning-box">
-    <h1>
-        {{ it.type | safe}} // {{ it.severity | safe}}
-    </h1>
-    
-    <div style="font-weight: normal">
-        {{it.desc | safe}}
+    <div class="warning-box">
+        <h1 style="border-bottom: none; padding-top: 0; margin-bottom: 5px;">
+            {{ it.type | safe}} // {{ it.severity | safe}}
+        </h1>
+        
+        <div style="font-weight: normal">
+            {{it.desc | safe}}
+        </div>
+        
+        <div class="divider-dashed"></div>
+        
+        <div class="bold">
+            REMOVE WHEN TREATED
+        </div>
     </div>
-<div class="divider-dashed"></div>
-    <div>
-        REMOVE WHEN TREATED
-    </div>
-</div>
 </body>
+</html>

@@ -1,23 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="https://raw.githack.com/Lavaill/PublicStylesheets/main/mothership.css">
 </head>
 <body>
+
     <div class="meta-grid">
         <span>REF: {{it.id | safe}}</span>
         <span>GM_EYES_ONLY</span>
     </div>
+
     <div class="divider-dashed"></div>
 
     <h1>{{it.title | safe}}</h1>
 
     <div class="meta-grid">
-        <span class= "comm-line" style="text-transform: uppercase"><span class="bold">>></span>{{it.location | safe}}</span>
+        <span class="comm-line" style="text-transform: uppercase">
+            <span class="bold">>></span>{{it.location | safe}}
+        </span>
         <span style="text-transform: uppercase">{{it.locationRef | safe}}</span>
     </div>
+
     <div style="border-bottom: var(--border-thick)"></div>
 
-    <div style="padding-top: 15px">
-        <span class="bold" >SITREP:</span> {{it.summary | safe}}
+    <div class="pt-2">
+        <span class="bold">SITREP:</span> {{it.summary | safe}}
     </div>
 
     <h2>Cast</h2>
@@ -25,11 +32,11 @@
         <tbody>
             {% for npc in it.cast %}
             <tr>
-                <td style="vertical-align: top;">
+                <td>
                     <div class="bold">{{npc.name | safe}}</div>
                     <div class="small-text">"{{npc.tagline | safe}}"</div>
                 </td>
-                <td class="small-text" style="vertical-align: top;">
+                <td class="small-text">
                     <div><span class="bold">Q:</span> {{npc.quirk | safe}}</div>
                     <div><span class="bold">W:</span> {{npc.want | safe}}</div>
                 </td>
@@ -57,14 +64,14 @@
         <tbody>
             {% for item in it.rewards %}
             <tr>
-                <td class="bold" style="vertical-align: top;">{{item.type | safe}}</td>
+                <td class="bold">{{item.type | safe}}</td>
                 <td class="small-text">{{item.desc | safe}}</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 
-    <div class="text-center small-text" style="margin-top: 20px;">
+    <div class="text-center small-text mt-3">
         *** END OF RECORD ***
     </div>
 
