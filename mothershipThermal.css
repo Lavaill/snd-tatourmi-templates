@@ -4,6 +4,8 @@
 
         /* CONFIGURATION */
         :root {
+            --font-xxxs: 10px; 
+            --font-xs:   15px; 
             --font-sm:   28px; 
             --font-base: 32px; 
             --font-lg:   36px; 
@@ -275,62 +277,7 @@
             flex-shrink: 0;
         }
 
-        /* --- MODULE: INVOICE TOTALS --- */
-        .invoice-total {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: var(--font-lg);
-            border: var(--border-thick);
-            border-top: none; 
-            padding: 5px 10px; /* Increased Padding */
-            margin-top: 0; 
-        }
-
         /* --- MODULE: SYSTEM DIAGNOSTICS --- */
-        .checklist-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin: 10px 0;
-        }
-        .check-item {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px dotted #000;
-        }
-
-        /* --- MODULE: STATUS BAR --- */
-        .status-bar-container {
-            margin: 20px 0;
-        }
-        .status-label {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            margin-bottom: 2px;
-        }
-        .progress-track {
-            border: var(--border-thick);
-            height: 24px;
-            width: 100%;
-            background: #fff;
-            padding: 2px;
-        }
-        .progress-fill {
-            background: #000000;
-            height: 100%;
-            width: 75%; 
-        }
-
-        /* --- MODULE: LEGAL --- */
-        .legal-block {
-            font-size: var(--font-sm);
-            text-align: justify;
-            margin: 10px 0;
-        }
-        .legal-list { padding-left: 20px; margin: 5px 0; }
-        .legal-list li { margin-bottom: 5px; }
 
         
         .quote-block {
@@ -353,14 +300,21 @@
         .stat-val { font-size: var(--font-lg); font-weight: bold; }
         .stat-lbl { font-size: var(--font-sm); }
 
-        /* --- MODULE: ASCII MAP --- */
+        /* --- MODULE: ASCII --- */
         .ascii-art {
             font-family: 'VT323', monospace;
             white-space: pre;
             line-height: 1;
             font-size: var(--font-sm);
-            text-align: center;
-            border: var(--border-dash);
+            padding: 10px 0;
+            margin: 15px 0;
+            overflow-x: hidden;
+        }
+        .ascii-art-large {
+            font-family: 'VT323', monospace;
+            white-space: pre;
+            line-height: 1;
+            font-size: var(--font-xxs);
             padding: 10px 0;
             margin: 15px 0;
             overflow-x: hidden;
