@@ -3,29 +3,37 @@
 		"id": "mission-template",
 		"name": "mission-template",
 		"data": {
-			"cast": [
-				{
-					"name": "Loshe",
-					"quirk": "Cigar, four arms, calm voice",
-					"tagline": "Chill Dockmaster",
-					"want": "Keep things running."
-				}
-			],
-			"id": "REPO-073",
-			"location": "Dock 4, next to Dry Dock",
-			"locationRef": "APOF-11",
-			"rewards": [
-				{
-					"desc": "Brand new revolver. 1d10+1 Never used. Which flashy attachment did this idiot strap on?",
-					"type": "Weapon"
-				}
-			],
-			"scenes": [
-				"A spiderweb of tripwires and improvised shotgun-shell/02-tanks traps. A corpse is floating in the airlock, gun in hand. How do you proceed?",
-				"The headless, frozen corpse of the pilot, shotgun on lap. Note: 'I just wanted to help.'. Last ship transmission to 'I.K'"
-			],
-			"summary": "A pilot has rigged his docked ship with deadly traps to prevent repo. Smuggled oxygen for I.K. The pilot isn't fighting back; he is floating frozen in the driver's seat (Suicide, shotgun, messy).",
-			"title": "Shotgun Repo"
+	"cast": [
+		{
+			"name": "Loshe",
+			"quirk": "Cigar, four arms, calm voice",
+			"tagline": "Chill Dockmaster",
+			"want": "Keep things running."
 		}
+	],
+	"id": "REPO-073",
+	"location": "Dock 4, next to Dry Dock",
+	"locationRef": "APOF-11",
+	"rewards": [
+		{
+			"desc": "Antique hunting shotgun. 2d10 close, 1d10 far. 2 shots, can doublefire for x2 dmg.",
+			"type": "Weapon"
+		},
+		{
+			"desc": "Brand new revolver. 1d10+1 Never used. Which flashy attachment did this idiot strap on?",
+			"type": "Weapon"
+		}
+	],
+	"scenes": [
+		{
+			"desc": "A spiderweb of tripwires and improvised shotgun-shell/02-tanks traps. A corpse is floating in the airlock, gun in hand. How do you proceed?"
+		},
+		{
+			"desc": "Door to the cabin opens: The headless, frozen corpse of the pilot, shotgun on lap. Note: 'I just wanted to help.'. Last ship transmission to 'I.K'"
+		}
+	],
+	"summary": "A pilot has rigged his docked ship with deadly traps to prevent repo. Smuggled oxygen for I.K. The pilot isn't fighting back; he is floating frozen in the driver's seat (Suicide, shotgun, messy).",
+	"title": "Shotgun Repo"
+}
 	}
 ]

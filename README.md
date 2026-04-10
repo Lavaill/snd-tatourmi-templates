@@ -1,3 +1,3 @@
-A repo containing various templates, initially meant for use with the Mothership role-playing game. Aesthetically we're trying to aim for Cassette Futurism and Industrial Sci-Fi with a hint of corporate dystopia, which honestly should match most popular science fiction role-playing games.
+A repo containing various thermal printing templates, initially meant for use with the Mothership role-playing game. Aesthetically they should match Cassette Futurism and Industrial Sci-Fi with a hint of corporate dystopia, which honestly should work for most popular science fiction role-playing games.
 
 TODO Describe each template's purpose you lazy bum.
