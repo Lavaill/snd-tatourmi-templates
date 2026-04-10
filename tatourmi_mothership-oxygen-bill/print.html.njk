@@ -1,10 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
     <link rel="stylesheet" href="https://raw.githack.com/Lavaill/PublicStylesheets/main/mothership.css">
     <style>
         h1:first-child {
             margin-top: 0;
             padding-top: 0px; /* Minimal padding for thermal head safety */
         }
-
 
         .payment-focus {
             display: flex;
@@ -58,56 +61,55 @@
             border-left: 2px solid #000;
         }
 
-.coupon-ticket {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    
-    border: 2px solid #000;
-    border-radius: 15px; /* The Rounding */
-    
-    padding: 10px 5px;
-    font-family: 'VT323', monospace;
-    font-style: normal;
-    text-align: center;
-    position: relative;
-}
+        .coupon-ticket {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            border: 2px solid #000;
+            border-radius: 15px; /* The Rounding */
+            padding: 10px 5px;
+            font-family: 'VT323', monospace;
+            font-style: normal;
+            text-align: center;
+            position: relative;
+        }
 
-.coupon-sponsor-tab {
-    position: absolute;
-    top: -18px;
-    background: #fff;
-    letter-spacing: 1px;
-    padding: 0 5px;
-    font-size: 25px;
-    left: 40px;
-    font-weight: bold;
-}
+        .coupon-sponsor-tab {
+            position: absolute;
+            top: -18px;
+            background: #fff;
+            letter-spacing: 1px;
+            padding: 0 5px;
+            font-size: 25px;
+            left: 40px;
+            font-weight: bold;
+        }
 
-.coupon-cut-label {
-    position: absolute;
-    top: -16px;
-    background: #fff;
-    padding: 0 5px;
-    font-size: 22px;
-    left: 290px;
-}
+        .coupon-cut-label {
+            position: absolute;
+            top: -16px;
+            background: #fff;
+            padding: 0 5px;
+            font-size: 22px;
+            left: 290px;
+        }
 
-.coupon-ticket-body {
-    font-size: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.1;
-    display: block;
-}
+        .coupon-ticket-body {
+            font-size: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.1;
+            display: block;
+        }
 
-.coupon-ticket-sub {
-    font-size: 25px;
-    display: block;
-    margin-top: 2px;
-}
+        .coupon-ticket-sub {
+            font-size: 25px;
+            display: block;
+            margin-top: 2px;
+        }
     </style>
 </head>
+
 <body>
 
     <div>
@@ -129,9 +131,9 @@
     </div>
 
     <div class="sig-container-v7-1">
-        <div class="sig-entry"">
+        <div class="sig-entry">
             <div>> BREATHE: Reduce one stress when paid</div>
-            <div class = "divider-dashed"></div>
+            <div class="divider-dashed"></div>
             <div>> PROSPER: Increase any save by one for +900cr</div>
         </div>
         <div class="stamp-square-flat">
@@ -139,14 +141,15 @@
         </div>
     </div>
 
-
-<div class="quote-block">
-    {{it.quote | safe}}
-</div>
-
+    <div class="quote-block">
+        {{it.quote | safe}}
     </div>
 
     <div class="perforation"></div>
     <div class="text-center small-text">
         PROSPERO'S-DREAM LIFE SUPPORT AUTHORITY 
     </div>
+
+</body>
+
+</html>

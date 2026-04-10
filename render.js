@@ -4,8 +4,30 @@ const path = require('path');
 
 const cssPath = path.join(__dirname, 'mothershipThermal.css');
 const css = fs.readFileSync(cssPath, 'utf8');
-const cssTag = `<style>\n${css}\n</style>`;
 
+// Preview-specific styles to simulate the 576px thermal roll
+const previewStyles = `
+<style>
+/* PREVIEW CONSTRAINTS */
+html { 
+    background-color: #222; /* Dark background for contrast */
+    margin: 0;
+    padding: 0;
+}
+body { 
+    width: 576px !important; 
+    background-color: #fff !important; 
+    /* Side shadows for a "floating roll" look */
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    margin: 0 auto !important;
+    min-height: 100vh;
+    padding: 30px 15px 150px 15px !important; /* Bottom padding for the "tail" */
+    position: relative;
+    box-sizing: border-box;
+}
+</style>`;
+
+const cssTag = `<style>\n${css}\n</style>\n${previewStyles}`;
 // Configure Nunjucks
 nunjucks.configure({ autoescape: false }); // Set autoescape to false as templates use | safe
 
