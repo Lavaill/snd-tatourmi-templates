@@ -3,56 +3,53 @@
 		"id": "contract-template",
 		"name": "contract-template",
 		"data": {
-	"client": "Rossi N",
-	"hazard": 1,
-	"missionDescription": "VIP requires transport. Heavy equipment and potential industrial espionage to be expected. Biological entity \u003cspan class='redacted'\u003eredacted\u003c/span\u003e requires special protection, additional incentive provided.",
-	"missionId": "AD-121",
-	"missionName": "Escort vip",
-	"missionPay": {
-		"text": "500",
-		"unit": "cr"
-	},
-	"objectives": [
-		{
-			"objective": "Deliver VIP",
-			"pay": "MDT"
-		},
-		{
-			"objective": "Transport equipment",
-			"pay": "MDT"
-		},
-		{
-			"objective": "Protect \u003cspan class='redacted'\u003eredacted\u003c/span\u003e",
-			"pay": "+500"
-		}
-	],
-	"params": [
-		{
-			"checkbox": "[ ]",
-			"info": "",
-			"name": "NDA"
-		},
-		{
-			"checkbox": "[ ]",
-			"info": "",
-			"name": "JUMPS"
-		},
-		{
-			"checkbox": "[ ]",
-			"info": "",
-			"name": "SALVAGE"
-		},
-		{
-			"checkbox": "[ ]",
-			"info": "",
-			"name": "EVAC"
-		}
-	],
-	"warnings": [
-		{
-			"text": "Free Pasta"
-		}
-	]
-}
+        "client": "Prspr Asset Mgmt.",
+        "missionDescription": "Repossession of Class-4 Heavy Loader. Client in default. Previous recovery team lost due to unsanctioned perimeter denial devices. Bomb squad unavailable due to budget cuts. Salvage rights granted for personal effects",
+        "id": "REPO-073",
+        "missionName": "Asset Recovery",
+        "missionPay": {
+          "text": "2000",
+          "unit": "cr"
+        },
+        "hazard": 3,
+        "objectives": [
+          {
+            "objective": "Retrieve Control Chip",
+            "pay": "MDT"
+          },
+          {
+            "objective": "Clear Obstructions",
+            "pay": "+800"
+          },
+          {
+            "objective": "Recover Bodies",
+            "pay": "+200"
+          }
+        ],
+        "params": [
+          {
+            "checkbox": "[ ]",
+            "info": "",
+            "name": "NDA"
+          },
+          {
+            "checkbox": "[ ]",
+            "info": "",
+            "name": "JUMPS"
+          },
+          {
+            "checkbox": "[x]",
+            "info": "prsnl",
+            "name": "SALVAGE"
+          },
+          {
+            "checkbox": "[ ]",
+            "info": "",
+            "name": "EVAC"
+          }
+        ],
+        "warnings": [
+        ]
+      }
 	}
 ]

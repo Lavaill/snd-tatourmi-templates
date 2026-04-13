@@ -1,8 +1,8 @@
 {
 	"client": "Rossi N",
 	"hazard": 1,
-	"missionDescription": "VIP requires transport. Heavy equipment and potential industrial espionage to be expected. Biological entity \u003cspan class='redacted'\u003eredacted\u003c/span\u003e requires special protection, additional incentive provided.",
-	"missionId": "AD-121",
+	"missionDescription": "VIP requires transport. Heavy equipment and potential industrial espionage to be expected. Biological entity \u003cspan class='redacted'\u003esourdough starter\u003c/span\u003e requires special protection, additional incentive provided.",
+	"id": "AD-121",
 	"missionName": "Escort vip",
 	"missionPay": {
 		"text": "500",
@@ -18,7 +18,7 @@
 			"pay": "MDT"
 		},
 		{
-			"objective": "Protect \u003cspan class='redacted'\u003eredacted\u003c/span\u003e",
+			"objective": "Protect \u003cspan class='redacted'\u003esourdough starter\u003c/span\u003e",
 			"pay": "+500"
 		}
 	],

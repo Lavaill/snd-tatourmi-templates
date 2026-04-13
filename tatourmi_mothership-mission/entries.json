@@ -7,7 +7,7 @@
 		{
 			"name": "Loshe",
 			"quirk": "Cigar, four arms, calm voice",
-			"tagline": "Chill Dockmaster",
+			"tagline": "Helpful Dockmaster",
 			"want": "Keep things running."
 		}
 	],
@@ -20,7 +20,7 @@
 			"type": "Weapon"
 		},
 		{
-			"desc": "Brand new revolver. 1d10+1 Never used. Which flashy attachment did this idiot strap on?",
+			"desc": "Late agent's brand new revolver. 1d10+1 Never used. Which flashy attachment did this idiot strap on?",
 			"type": "Weapon"
 		}
 	],
@@ -32,7 +32,7 @@
 			"desc": "Door to the cabin opens: The headless, frozen corpse of the pilot, shotgun on lap. Note: 'I just wanted to help.'. Last ship transmission to 'I.K'"
 		}
 	],
-	"summary": "A pilot has rigged his docked ship with deadly traps to prevent repo. Smuggled oxygen for I.K. The pilot isn't fighting back; he is floating frozen in the driver's seat (Suicide, shotgun, messy).",
+	"summary": "A pilot has rigged his docked ship with deadly traps to prevent repo. Smuggled oxygen for I.K. The pilot isn't fighting back; he is floating frozen in the driver's seat (Suicide, shotgun, messy). The corpse of the first agent sent is floating in the trapped hallway, trap shotgun blast.",
 	"title": "Shotgun Repo"
 }
 	}

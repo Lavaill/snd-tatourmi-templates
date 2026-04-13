@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mothership Thermal Style Guide - UPDATED</title>
+    <!-- Injected mothershipThermal.css -->
+    <style>
+        /* FONTS */
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        /* CONFIGURATION */
+        :root {
+            --font-xxxs: 10px; 
+            --font-xs:   15px;
+            --font-sm:   28px; 
+            --font-base: 32px; 
+            --font-lg:   36px; 
+            --font-xl:   42px; 
+            
+            --border-thick: 3px solid #000;
+            --border-thin:  2px solid #000;
+            --border-dash:  2px dashed #000;
+        }
+
+        /* RESET & BASE */
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 0 15px;
+            font-family: 'VT323', monospace;
+            font-size: var(--font-base);
+            line-height: 1.1;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: var(--font-xl);
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 0 10px 0;
+            padding-top: 10px;
+            border-bottom: var(--border-thick);
+        }
+
+        h2 {
+            font-size: var(--font-lg);
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: var(--border-thin);
+            margin: 25px 0 10px 0;
+        }
+
+        .text-center { text-align: center; }
+        .text-right  { text-align: right; }
+        .bold        { font-weight: bold; }
+        .small-text  { font-size: var(--font-sm); }
+        .v-top       { vertical-align: top; }
+
+        /* --- SPACING UTILITIES --- */
+        .mt-1 { margin-top: 5px; }
+        .mt-2 { margin-top: 10px; }
+        .mt-3 { margin-top: 20px; }
+        .pt-1 { padding-top: 5px; }
+        .pt-2 { padding-top: 10px; }
+        .pt-3 { padding-top: 20px; }
+        
+        /* --- UTILITY LINES --- */
+        .divider-dashed {
+            border-bottom: var(--border-dash);
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        /* --- MODULE: BOXES --- */
+        .desc-box {
+            border: var(--border-thin);
+            border-style: dashed;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: var(--font-sm);
+        }
+
+        /* --- MODULE: TABLES --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: var(--border-thick);
+            margin: 10px 0 0 0; 
+            font-size: var(--font-base);
+        }
+        th {
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+            text-align: left;
+            padding: 6px 10px;
+            text-transform: uppercase;
+            border-bottom: var(--border-thick);
+        }
+        td {
+            padding: 6px 10px;
+            font-weight: normal; 
+            border-bottom: var(--border-dash);
+            vertical-align: top;
+        }
+        tr:last-child td { border-bottom: none; }
+
+        /* --- MODULE: GRIDS --- */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .calc-box {
+            border: var(--border-thin);
+            padding: 5px;
+            text-align: center;
+        }
+
+        /* --- MODULE: DEFCON/HAZARD --- */
+        .defcon-scale {
+            display: flex;
+            border: var(--border-thin);
+            margin-top: 5px;
+        }
+        .defcon-lvl {
+            flex-grow: 1;
+            text-align: center;
+            font-weight: bold;
+            background: #fff;
+            font-size: var(--font-sm);
+        }
+        .defcon-active {
+            background: #000;
+            color: #fff;
+        }
+
+        /* --- MODULE: HERO VALUES --- */
+        .payment-focus {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 5px 0;
+        }
+
+        .side-detail {
+            font-size: 25px;
+            line-height: 1;
+            text-transform: uppercase;
+            border-left: var(--border-thin);
+            padding-left: 8px;
+            height: 60px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cost-hero {
+            font-size: 90px;
+            font-weight: bold;
+            line-height: 0.8;
+        }
+
+        /* --- MODULE: DEBIT NOTICE BOX (O2 SPECIAL) --- */
+        .debit-box {
+            margin: 15px 0;
+            display: flex;
+            border: var(--border-thin);
+            align-items: center;
+        }
+        .debit-entry {
+            flex-grow: 1;
+            font-size: 22px; 
+            padding: 8px;
+        }
+        .debit-entry .divider-dashed { margin: 5px 0; }
+
+        /* --- MODULE: STAMPS & SEALS --- */
+        .stamp-square-flat {
+            width: 120px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            background: #fff;
+            border-left: var(--border-thin);
+        }
+
+        /* --- MODULE: COUPON/TICKET --- */
+        .coupon-ticket {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            border: var(--border-thin);
+            border-radius: 15px;
+            padding: 10px 5px;
+            text-align: center;
+            position: relative;
+        }
+
+        .coupon-sponsor-tab {
+            position: absolute;
+            top: -18px;
+            background: #fff;
+            letter-spacing: 1px;
+            padding: 0 5px;
+            font-size: 25px;
+            left: 40px;
+            font-weight: bold;
+        }
+
+        .coupon-ticket-sub {
+            font-size: 25px;
+            display: block;
+            margin-top: 2px;
+        }
+
+        /* --- MODULE: METADATA --- */
+        .meta-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: normal; 
+        }
+
+        /* --- MODULE: WARNING BOX --- */
+        .warning-box {
+            border: var(--border-thick);
+            padding: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: var(--font-lg);
+            margin: 15px 0;
+            text-transform: uppercase;
+        }
+
+        /* --- MODULE: SIGNATURE (CENTERED) --- */
+        .signature-wrapper {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center; 
+            gap: 20px;
+            page-break-inside: avoid;
+        }
+        .sig-lines {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .signature-label {
+            font-size: var(--font-sm);
+            font-weight: bold;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+        .signature-line {
+            border-bottom: var(--border-thin);
+            width: 100%;
+            height: 2px; 
+        }
+        .stamp-box {
+            width: 120px;
+            height: 120px;
+            border: var(--border-dash);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-sm);
+            color: #000;
+            flex-shrink: 0;
+        }
+
+        /* --- MODULE: SYSTEM DIAGNOSTICS --- */
+        .checklist-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .check-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dotted #000;
+        }
+
+        /* --- MODULE: STATUS BAR --- */
+        .status-bar-container {
+            margin: 20px 0;
+        }
+        .status-label {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        .progress-track {
+            border: var(--border-thick);
+            height: 24px;
+            width: 100%;
+            background: #fff;
+            padding: 2px;
+        }
+        .progress-fill {
+            background: #000000;
+            height: 100%;
+            width: 75%; 
+        }
+
+        
+        .quote-block {
+            text-align: center;
+            font-style: italic;
+            font-size: 26px;
+        }
+
+        /* --- MODULE: STAT BLOCK --- */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            text-align: center;
+            border: var(--border-thin);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .stat-item span { display: block; }
+        .stat-val { font-size: var(--font-lg); font-weight: bold; }
+        .stat-lbl { font-size: var(--font-sm); }
+
+
+        /* --- MODULE: ASCII --- */
+        .ascii-art {
+            font-family: 'VT323', monospace;
+            white-space: pre;
+            line-height: 1;
+            font-size: var(--font-sm);
+            padding: 10px 0;
+            margin: 15px 0;
+            overflow-x: hidden;
+        }
+        .ascii-art-large {
+            font-family: 'VT323', monospace;
+            white-space: pre;
+            line-height: 1;
+            font-size: var(--font-xxxs);
+            padding: 10px 0;
+            margin: 15px 0;
+            overflow-x: hidden;
+        }
+
+        /* --- MODULE: COMMS --- */
+        .comm-line { margin-bottom: 8px; display: flex; gap: 10px; }
+        .comm-time { font-weight: bold; min-width: 60px; }
+        .comm-user { font-weight: bold; text-transform: uppercase; }
+
+        /* --- MODULE: RESOURCE --- */
+        .resource-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dotted #000;
+            padding: 5px 0;
+        }
+        .checkboxes { letter-spacing: 5px; font-weight: bold; }
+
+        /* --- MODULE: ID CARD (LARGE PHOTO) --- */
+        .id-card {
+            border: var(--border-thick);
+            padding: 10px;
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            align-items: flex-start;
+        }
+        .photo-placeholder {
+            width: 120px;  
+            height: 140px; 
+            background: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: var(--font-sm);
+            flex-shrink: 0;
+        }
+        .id-details { flex-grow: 1; }
+
+        /* --- MODULE: REDACTED --- */
+        .redacted { background-color: #000; color: #000; padding: 0 4px; }
+        
+        /* --- MODULE: BOUNTY --- */
+        .bounty-header {
+            text-align: center;
+            border: var(--border-thick);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .wanted-text { font-size: var(--font-xl); font-weight: bold; }
+        .reward-text { font-size: var(--font-lg); border-top: var(--border-thin); margin-top: 5px; padding-top: 5px;}
+
+        /* --- MODULE: BODY SCAN --- */
+        .scan-list { display: grid; grid-template-columns: 1fr 1fr; font-size: var(--font-sm); }
+
+        /* --- NEW MODULE: WEAPON SPEC --- */
+        .weapon-card {
+            border: var(--border-thick);
+            margin-bottom: 15px;
+        }
+        .weapon-header {
+            background: #000;
+            color: #fff;
+            padding: 5px;
+            font-weight: bold;
+            font-size: var(--font-lg);
+            text-align: center;
+        }
+        .weapon-details {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            font-size: var(--font-sm);
+        }
+
+        /* --- NEW MODULE: KEYPAD --- */
+        .keypad-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            width: 200px;
+            margin: 0 auto;
+        }
+        .keypad-btn {
+            border: 2px solid #000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: var(--font-lg);
+        }
+    </style>
+
+    <!-- Style Guide Specific Styles -->
+    <style>
+        html { background-color: #222; margin: 0; padding: 0; }
+        .preview-body { 
+            width: 576px; 
+            background-color: #fff; 
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
+            margin: 0 auto;
+            min-height: 100vh;
+            padding: 40px 15px 150px 15px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .guide-section { 
+            border-left: 10px solid #000; 
+            padding: 10px; 
+            margin: 60px 0 20px 0;
+            background: #eee;
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .guide-item {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+        .label {
+            display: block;
+            font-family: sans-serif;
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+<div class="preview-body">
+
+    <h1>MOTHERSHIP STYLE GUIDE</h1>
+    <div class="text-center small-text">SYSTEM-WIDE VISUAL STANDARDS</div>
+
+    <div class="guide-section">I. Typography & Utilities</div>
+    
+    <div class="guide-item">
+        <span class="label">h1</span>
+        <h1>Heading 1 Example</h1>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">h2</span>
+        <h2>Heading 2 Example</h2>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.text-center / .text-right / .bold</span>
+        <div class="text-center">Centered Text</div>
+        <div class="text-right">Right Aligned Text</div>
+        <div class="bold">Bold Text</div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.small-text</span>
+        <div class="small-text">This is smaller text for fine print.</div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.redacted</span>
+        ACCESS <span class="redacted">DENIED BY SYSTEM</span> PERMISSION.
+    </div>
+
+    <div class="guide-section">II. Spacing & Lines</div>
+
+    <div class="guide-item">
+        <span class="label">.divider-dashed</span>
+        <div class="divider-dashed"></div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.mt-1 / .mt-2 / .mt-3 (Margins)</span>
+        <div style="background: #eee">Box A</div>
+        <div class="mt-1" style="background: #ddd">Box B (.mt-1)</div>
+        <div class="mt-2" style="background: #ccc">Box C (.mt-2)</div>
+        <div class="mt-3" style="background: #bbb">Box D (.mt-3)</div>
+    </div>
+
+    <div class="guide-section">III. Grids & Scales</div>
+
+    <div class="guide-item">
+        <span class="label">.meta-grid</span>
+        <div class="meta-grid">
+            <span>CLIENT: W-Y CORP</span>
+            <span>ID: 999-B</span>
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.stat-grid / .stat-item / .stat-val / .stat-lbl</span>
+        <div class="stat-grid">
+            <div class="stat-item"><span class="stat-val">80</span><span class="stat-lbl">STR</span></div>
+            <div class="stat-item"><span class="stat-val">45</span><span class="stat-lbl">SPD</span></div>
+            <div class="stat-item"><span class="stat-val">60</span><span class="stat-lbl">INT</span></div>
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.defcon-scale / .defcon-lvl / .defcon-active</span>
+        <div class="defcon-scale">
+            <div class="defcon-lvl">1</div>
+            <div class="defcon-lvl">3</div>
+            <div class="defcon-lvl defcon-active">5</div>
+            <div class="defcon-lvl">8</div>
+            <div class="defcon-lvl">13</div>
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.scan-list</span>
+        <div class="scan-list">
+            <span>> HEART: NORMAL</span>
+            <span>> LUNGS: CLEAR</span>
+            <span>> BRAIN: NULL</span>
+            <span>> EYES: RED</span>
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.checklist-container / .check-item</span>
+        <div class="checklist-container">
+            <div class="check-item"><span>Oxygen</span><span>[X]</span></div>
+            <div class="check-item"><span>Rations</span><span>[ ]</span></div>
+            <div class="check-item"><span>Fuel</span><span>[X]</span></div>
+            <div class="check-item"><span>Sanity</span><span>[ ]</span></div>
+        </div>
+    </div>
+
+    <div class="guide-section">IV. Layout Modules</div>
+
+    <div class="guide-item">
+        <span class="label">.desc-box</span>
+        <div class="desc-box">
+            This is a dashed description box used for mission summaries or contract details.
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.warning-box</span>
+        <div class="warning-box">
+            /!\ CRITICAL SYSTEM FAILURE /!\
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.id-card / .photo-placeholder / .id-details</span>
+        <div class="id-card">
+            <div class="photo-placeholder">PHOTO</div>
+            <div class="id-details">
+                <div class="bold">NAME: JOHN DOE</div>
+                <div class="small-text">ROLE: EXPENDABLE</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.bounty-header / .wanted-text / .reward-text</span>
+        <div class="bounty-header">
+            <div class="wanted-text">WANTED</div>
+            <div class="reward-text">1,000,000 CR</div>
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.weapon-card / .weapon-header / .weapon-details</span>
+        <div class="weapon-card">
+            <div class="weapon-header">F-20 PULSE RIFLE</div>
+            <div class="weapon-details">
+                <span>DMG: 2d10</span>
+                <span>MAG: 40</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="guide-section">V. Financial & Interactive</div>
+
+    <div class="guide-item">
+        <span class="label">.payment-focus / .side-detail / .cost-hero</span>
+        <div class="payment-focus">
+            <div class="side-detail">TAX<br>REC</div>
+            <div class="cost-hero">500<span class="small-text">CR</span></div>
+            <div class="side-detail">HS: +1<br>TM: 20M</div>
+        </div>
+    </div>
+
+        <div class="guide-item">
+        <span class="label">.signature-wrapper / .sig-lines / .signature-label / .signature-line / .stamp-box</span>
+    <div class="signature-wrapper">
+        <div class="sig-lines">
+            <div class="signature-label">Contractor signature</div>
+            <div class="signature-line"></div>
+        </div>
+        <div class="stamp-box">Complete</div>
+    </div>
+        </div>
+
+    <div class="guide-item">
+        <span class="label">.debit-box / .debit-entry / .stamp-square-flat</span>
+        <div class="debit-box">
+            <div class="debit-entry">
+                <div>> LINE 1: ACTIVE</div>
+                <div class="divider-dashed"></div>
+                <div>> LINE 2: PENDING</div>
+            </div>
+            <div class="stamp-square-flat">OFFICIAL</div>
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.coupon-ticket / .coupon-sponsor-tab / .coupon-ticket-sub</span>
+        <div class="coupon-ticket">
+            <span class="coupon-sponsor-tab">SPONSORED</span>
+            <span class="coupon-ticket-sub">FREE SLUDGE WITH EVERY PURCHASE</span>
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.keypad-grid / .keypad-btn</span>
+        <div class="keypad-grid">
+            <div class="keypad-btn">1</div><div class="keypad-btn">2</div><div class="keypad-btn">3</div>
+            <div class="keypad-btn">4</div><div class="keypad-btn">5</div><div class="keypad-btn">6</div>
+            <div class="keypad-btn">7</div><div class="keypad-btn">8</div><div class="keypad-btn">9</div>
+        </div>
+    </div>
+
+    <div class="guide-section">VI. Status & Miscellaneous</div>
+
+    <div class="guide-item">
+        <span class="label">.status-bar-container / .status-label / .progress-track / .progress-fill</span>
+        <div class="status-bar-container">
+            <div class="status-label"><span>OXYGEN</span><span>45%</span></div>
+            <div class="progress-track"><div class="progress-fill" style="width: 45%"></div></div>
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.quote-block</span>
+        <div class="quote-block">
+            "Hope you find what you're looking for."
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.ascii-art</span>
+        <div class="ascii-art">
+(｡◕‿‿◕｡)
+</div>
+    </div>
+
+<div class="guide-item">
+        <span class="label">.ascii-art-large</span>
+        <div class="ascii-art-large">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠖⠃⠀⠀⠀⡁⠀⠀⠀⠀⠀⠐⠆⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⢔⡤⠊⠁⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠁⠀⠀⠘⠁⢀⠀⠀⠀⠀⢈⠓⠂⠠⡄⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣶⠿⠞⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠁⠀⠠⡚⠁⢀⣙⣀⣈⡩⠬⢁⠀⢑⠶⠤⡆⠤⡀⠀⠀⠀⠀⠀⠀⢀⠴⢲⣋⣽⣷⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⢠⠀⠀⣶⠃⠗⣡⣶⣮⣿⡿⠿⠿⢿⣿⣷⣶⣤⣤⠤⠴⠦⠬⣤⣤⠄⣉⠉⠝⢲⣿⡷⠻⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠁⡀⡸⠁⣰⣿⡿⠛⠋⣁⡀⠤⠤⢄⡀⠈⠛⢯⣿⣟⣾⣶⣶⣮⣭⣵⣾⣿⣟⠿⠉⢨⠖⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⢠⠳⡧⣻⡿⠋⢀⠒⠉⠀⠀⠀⠀⠀⠀⠉⠢⠀⠀⠙⠛⣻⣿⣿⣿⢿⣿⣿⠟⡱⠖⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢠⣧⠓⣾⣿⠁⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⢦⣠⣾⣿⠿⣿⣿⣿⡿⣫⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠂⢃⣸⣿⠇⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣿⠟⢿⠁⠸⡿⣿⣯⡶⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢘⡄⠘⣿⣿⠀⠸⡀⠀⠀⠀⠀⠀⢀⣀⣴⣾⣿⡿⡟⡋⠐⡇⠀⢸⣿⣿⠃⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢡⠘⢰⣿⡿⡆⠀⣇⠀⣀⣠⣤⣶⣿⢷⢟⠻⠀⠈⠀⠀⠀⡇⠀⣼⣿⣿⠂⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⢀⡴⢯⣾⠟⡏⢀⣠⣿⣿⣿⣟⢟⡋⠅⠘⠉⠀⠀⠀⠀⢀⠀⠁⢠⣿⣟⠃⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠞⣻⣷⡿⢙⣩⣶⡿⠿⠛⠉⠑⢡⡁⠀⠀⠀⠀⠀⠀⢀⠔⠁⠀⣰⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣡⣾⣥⣾⢫⡦⠾⠛⠙⠉⠀⠀⢀⣀⠀⠈⠙⠓⠦⠤⠤⠀⠘⠁⢀⡤⣾⡿⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠔⣴⣾⣿⣿⢟⢝⠢⠃⢀⣤⢴⣾⣮⣷⣶⢿⣶⡤⣐⡀⠀⣠⣤⢶⣪⣿⣿⡿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⡀⣦⣾⡿⡛⠵⠺⢈⡠⠶⠿⠥⠥⡭⠉⠉⢱⡛⠻⠿⣿⣿⣿⣿⣿⠿⠿⠿⠟⠭⠛⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⢴⠕⣋⠝⠕⠐⠀⠔⠉⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠉⠁⠁⠁⠁⠈⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⡄⠀
+⢀⣠⠁⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠖⠒⢒⡶⠂⣠⣖⣲⠄⣠⠤⡧⣷⡇⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠶⠯⠓⠒⠂⠳⠤⠖⠘⠓⠒⠛⠞⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⡒⡄⡲⡂⢷⠲⢸⡲⢒⣘⡒⡀⠀
+</div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.resource-row / .checkboxes</span>
+        <div class="resource-row">
+            <span>HEALTH</span>
+            <span class="checkboxes">[X] [X] [ ] [ ]</span>
+        </div>
+    </div>
+
+    <div class="guide-item">
+        <span class="label">.comm-line / .comm-time / .comm-user</span>
+        <div class="comm-line">
+            <span class="comm-time">12:04</span>
+            <span class="comm-user">SYSTEM:</span>
+            <span>AIRLOCK OPEN</span>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

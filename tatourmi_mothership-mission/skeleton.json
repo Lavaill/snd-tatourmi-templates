@@ -1,33 +1,32 @@
 {
-	"cast": [
-		{
-			"name": "Loshe",
-			"quirk": "Cigar, four arms, calm voice",
-			"tagline": "Chill Dockmaster",
-			"want": "Keep things running."
-		}
-	],
-	"id": "REPO-073",
-	"location": "Dock 4, next to Dry Dock",
-	"locationRef": "APOF-11",
-	"rewards": [
-		{
-			"desc": "Antique hunting shotgun. 2d10 close, 1d10 far. 2 shots, can doublefire for x2 dmg.",
-			"type": "Weapon"
-		},
-		{
-			"desc": "Brand new revolver. 1d10+1 Never used. Which flashy attachment did this idiot strap on?",
-			"type": "Weapon"
-		}
-	],
-	"scenes": [
-		{
-			"desc": "A spiderweb of tripwires and improvised shotgun-shell/02-tanks traps. A corpse is floating in the airlock, gun in hand. How do you proceed?"
-		},
-		{
-			"desc": "Door to the cabin opens: The headless, frozen corpse of the pilot, shotgun on lap. Note: 'I just wanted to help.'. Last ship transmission to 'I.K'"
-		}
-	],
-	"summary": "A pilot has rigged his docked ship with deadly traps to prevent repo. Smuggled oxygen for I.K. The pilot isn't fighting back; he is floating frozen in the driver's seat (Suicide, shotgun, messy).",
-	"title": "Shotgun Repo"
-}
+        "id": "AD-121",
+        "title": "Operation Al Dente",
+        "summary": "Nonna Rossi is relocating her trattoria. The only available route cuts through a deck with notoriously unstable grav-plating. She wants her ancient-earth sourdough-starter and her machines safe",
+        "location": "Transit Corridor G-4 (Fluctuating Gravity)",
+        "locationRef": "",
+        "cast": [
+          {
+            "name": "Nonna Rossi",
+            "tagline": "Indomitable Matriarch",
+            "quirk": "Nobody goes hungry, everybody pays",
+            "want": "To keep the ravioli from overcooking, regardless of physics."
+          },
+          {
+            "name": "The Iron Press",
+            "quirk": "BIFL",
+            "tagline": "2-Ton Antique Machine",
+            "want": "To drift blindly into fragile ship systems."
+          }
+        ],
+        "scenes": [
+          {
+            "desc": "The gravity plating fails. Nonna tries to catch her ravioli while the press is drifting towards a gasline."
+          }
+        ],
+        "rewards": [
+          {
+            "type": "Contact",
+            "desc": "Nonna Rossi. Infinite Pasta and high-society gossip."
+          }
+        ]
+      }

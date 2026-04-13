@@ -4,7 +4,7 @@
 		"name": "OxygenTax",
 		"data": {
 			"price": "100",
-			"quote": "Thank you for choosing life.",
+			"quote": "\u003cdiv class='coupon-ticket'\u003e\u003cspan class='coupon-cut-label'\u003ePRSNT COUPON FOR OFFER\u003c/span\u003e\u003cspan class='coupon-sponsor-tab'\u003eSPONSORED\u003c/span\u003e\u003cspan class='coupon-ticket-sub'\u003e 25% off Vacc Suits! - Don't let the lack of pressure get to you! - PressureLock, keep it in.\u003c/span\u003e\u003c/div\u003e",
 			"timer": "20M"
 		}
 	}

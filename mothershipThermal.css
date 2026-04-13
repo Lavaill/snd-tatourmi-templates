@@ -374,7 +374,7 @@
         /* --- MODULE: BODY SCAN --- */
         .scan-list { display: grid; grid-template-columns: 1fr 1fr; font-size: var(--font-sm); }
 
-        /* --- NEW MODULE: WEAPON SPEC --- */
+        /* --- MODULE: WEAPON SPEC --- */
         .weapon-card {
             border: var(--border-thick);
             margin-bottom: 15px;
