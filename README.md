@@ -1,27 +1,32 @@
 # MOTHERSHIP THERMAL TEMPLATES
-A repo containing various thermal printing templates for , initially meant for use with the Mothership role-playing game. Aesthetically they should match any industrial Sci-Fi with a hint of corporate dystopia or cassette futurism, which will cover most popular science fiction role-playing games short of, maybe, Eclipse Phase.
+A repo containing various thermal printing templates for use with [Sales and Dungeons](https://sales-and-dungeons.app/), initially meant for the Mothership role-playing game. Aesthetically they should match any industrial Sci-Fi with a hint of corporate dystopia or cassette futurism, which will cover most popular science fiction RPG's short of Eclipse Phase.
 
 ## Templates
 
 ### Contract
-A player-facing handout representing a contract someone gave to the P.C's. Go over each objective at the end with a sharpie and stamp it before payment for extra flavor.
+A player-facing handout representing a contract for the P.C's. Go over each objective at the end with a sharpie and stamp it before payment for extra flavor.
 
 ### Mission
-A small G.M recap of a mission for quick reference during play. Not meant for the players, this one's for you.
+A small G.M recap of a mission for quick reference during play. Not meant for the players, this one's for *you*! 
 
 ### Wound
 A handout of a wound meant to be **aggressively stapled** on a player's character sheet. Only allow them to remove it when it's healed, the leftover staple leaving a physical scar on their sheet, forever. Using a **bigger** stapler for heavier wounds is optional but recommended. I'm partial to the Rapid K1 myself for those extra-large scars. Not a sponsor.
 
 ### O2 Bill
-An oxygen bill meant to replace the oxygen bill and shore leave systems in A Pound of Flesh, inspired by Shadowdark's realtime torches. Stamp when paid.
+An oxygen bill meant to replace the oxygen and shore leave systems in A Pound of Flesh, inspired by Shadowdark's realtime torches. Stamp when paid!
 
 ### Crew Ledger
-A quick player-facing handout representing known crew members.
+A quick player-facing handout representing a list of known crew members.
 
 ## Notes
 Most template properties allow html injection. This is used for the --redacted-- effect and for sponsor html injection in the O2 bill. I made sure to leave exemples in the skeletons you can take inspiration from.
 
 ## How to use
+
+### Printer Format
+The templates should work with any thermal printer but the use of column layout means an 80mm, 576px printer is optimal.
+
+### Stamp Size
 The stamp boxes are meant to accomodate loyalty-card scale stamps. You can find many cheap auto-refill ones online.
 
 ### Mission, Contract and ID
@@ -53,9 +58,10 @@ body : [
 AI was used to generate the render.js file and the style guide. I've also used an agent to brainstorm CSS and HTML property ideas and initial layout for most of the templates. I've gone over nearly all of the html and css by hand at this point (Basically everything used in actual templates), but I felt like people should know this is hand-finished, not hand-made.
 
 ## Roadmap
-- [ ] Describe each template's purpose.
+- [X] Describe each template's purpose.
 - [ ] Provide a shell script for people who don't want to make an entire third-party app for the O2 bill
 - [ ] Add a template for entities
 - [ ] Add gear templates
 - [ ] Add a map template of some kind
+- [ ] Add a computer log template
 - [ ] Re-Test all printouts (Don't judge me I was busy)
